@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <section class="flex justify-center">
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-3">
+            <div class="stats shadow">
+              <div class="stat">
+                <div class="stat-title">Total Amount</div>
+                <!-- display  -->
+                <div id="displayAmount" class="stat-value">89,400</div>
+                <div class="stat-desc">21% more than last month</div>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="flex justify-between gap-4">
+              <button
+                id="moneyIn"
+                class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+              >
+                Add Money
+              </button>
+              <button
+                id="moneyOut"
+                class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+              >
+                Cash out
+              </button>
+            </div>
+            <div class="divider"></div>
+            <!-- add cash form  -->
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span id="addMoney" class="label-text font-bold"
+                      >Add Amount</span
+                    >
+                  </label>
+                  <!-- cass add  -->
+                  <input
+                    type="text"
+                    placeholder="Add Amount"
+                    class="input input-bordered"
+                    id="addCash"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span id="checkPin" class="label-text font-bold"
+                      >Enter Your Pin</span
+                    >
+                  </label>
+                  <!-- give pin  -->
+                  <input
+                    type="password"
+                    placeholder="Pin"
+                    class="input input-bordered"
+                    id="enterPin"
+                    required
+                  />
+                  <label class="label">
+                    <a
+                      href="#"
+                      class="label-text-alt link link-hover font-semibold"
+                      >check the details attentively</a
+                    >
+                  </label>
+                </div>
+                <div class="form-control mt-6">
+                  <button id="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- add cash form end  -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <h1>wellcome to Home</h1> -->
+    <script src="./js files/home.js"></script>
+  </body>
+</html>
