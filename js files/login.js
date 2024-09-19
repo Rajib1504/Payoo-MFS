@@ -35,7 +35,7 @@ document.getElementById("btnLogin").addEventListener("click", function (event) {
   const pin = document.getElementById("pin").value;
   //   step-4
   //   Bad way to validate :
-  if (phone === "10" && pin === "30") {
+  if (phone == "8583881364" && pin == "13226") {
     alert("you have loging successfully");
     //     step-5 redirect to new webpage in locally
     window.location.href = "/home.html";
