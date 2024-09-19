@@ -43,7 +43,10 @@
             </div>
             <div class="divider"></div>
             <!-- add cash form  -->
-            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div
+              id="cashAdd"
+              class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden"
+            >
               <form class="card-body">
                 <div class="form-control">
                   <label class="label">
@@ -55,7 +58,7 @@
                   <input
                     type="text"
                     placeholder="Add Amount"
-                    class="input input-bordered"
+                    class="input empty input-bordered"
                     id="addCash"
                     required
                   />
@@ -83,11 +86,60 @@
                   </label>
                 </div>
                 <div class="form-control mt-6">
-                  <button id="submit" class="btn btn-primary">Submit</button>
+                  <button id="submit" class="btn btn-primary">Deposite</button>
                 </div>
               </form>
             </div>
             <!-- add cash form end  -->
+            <!-- add cash out from start  -->
+            <div
+              id="cashOuts"
+              class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl hidden"
+            >
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span id="addMoney" class="label-text font-bold"
+                      >Add Amount</span
+                    >
+                  </label>
+                  <!-- cass out  -->
+                  <input
+                    type="text"
+                    placeholder="Add Amount"
+                    class="input input-bordered"
+                    id="cashOut"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span id="checkPin" class="label-text font-bold"
+                      >Enter Your Pin</span
+                    >
+                  </label>
+                  <!-- give pin  -->
+                  <input
+                    type="password"
+                    placeholder="Pin"
+                    class="input input-bordered"
+                    id="enterPin2"
+                    required
+                  />
+                  <label class="label">
+                    <a
+                      href="#"
+                      class="label-text-alt link link-hover font-semibold"
+                      >check the details attentively</a
+                    >
+                  </label>
+                </div>
+                <div class="form-control mt-6">
+                  <button id="collect" class="btn btn-primary">withdraw</button>
+                </div>
+              </form>
+            </div>
+            <!-- add cah out form end  -->
           </div>
         </div>
       </div>
@@ -95,5 +147,6 @@
 
     <!-- <h1>wellcome to Home</h1> -->
     <script src="./js files/home.js"></script>
+    <script src="./js files/function.js"></script>
   </body>
 </html>

@@ -30,44 +30,56 @@
       <div class="mockup-phone">
         <div class="camera"></div>
         <div class="display">
-          <div class="artboard artboard-demo phone-3">
+          <!-- mobile body  -->
+          <div
+            class="artboard artboard-demo bg-cover bg-right phone-2"
+            style="background-image: url(./Img/bank\ Img.jpg)"
+          >
             <div class="hero bg- min-h-screen">
-              <div class="hero-content flex-col">
+              <div class="hero-content flex-col p-0">
+                <!-- login  -->
                 <div
-                  class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+                  class="cardshrink-0 backdrop-blur-md rounded-3xl shadow-2xl"
                 >
-                  <form class="card-body">
+                  <!-- bg-[#d6b8d3] -->
+                  <!-- bg-[#d3cae3b7]  -->
+                  <h4
+                    class="font-bold text-3xl text-center text-[#f3f7fa] pt-2"
+                  >
+                    Login
+                  </h4>
+
+                  <form class="grid m-8 gap-4">
                     <div class="form-control">
-                      <label class="label">
-                        <span class="label-text">Phone Number</span>
-                      </label>
                       <input
                         type="text"
-                        placeholder="phone"
-                        class="input input-bordered"
+                        placeholder="Enter Mobile Number"
+                        class="input bg-[#fcfcfc] border-2 border-[#ccaab1ac]"
                         required
                         id="phone"
                       />
                     </div>
                     <div class="form-control">
-                      <label class="label">
-                        <span class="label-text">pin</span>
-                      </label>
                       <input
                         type="password"
-                        placeholder="pin"
-                        class="input input-bordered"
+                        placeholder="Enter Passkey"
+                        class="input input-bordered bg-[#fcfcfc] border-2 border-[#ccaab1ac]"
                         required
                         id="pin"
                       />
-                      <label class="label">
-                        <a href="#" class="label-text-alt link link-hover"
+                      <label class="label" id="getKey">
+                        <a
+                          href="#"
+                          class="label-text-alt link link-hover color-white text-sm"
                           >Forgot password?</a
                         >
                       </label>
                     </div>
                     <div class="form-control mt-6">
-                      <button id="btnLogin" class="btn btn-primary">
+                      <button
+                        id="btnLogin"
+                        class="btn btn-primary bg-blue-700 shadow-inner shadow-blue-500 text-white font-semibold"
+                      >
                         Login
                       </button>
                     </div>

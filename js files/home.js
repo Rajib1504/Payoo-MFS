@@ -1,4 +1,5 @@
 console.log("home added");
+// Add cash part :
 // step -1  target the btn and prevent default...
 const submit = document
   .getElementById("submit")
@@ -32,4 +33,33 @@ const submit = document
     } else {
       alert("fail to add money please try again");
     }
+    document.getElementById("enterPin").value = "";
+    document.getElementById("addCash").value = "";
   });
+
+// cash out part :
+document.getElementById("collect").addEventListener("click", function (event) {
+  event.preventDefault();
+  console.log("btn working");
+  const cashOut = document.getElementById("cashOut").value;
+  console.log(cashOut);
+  const cashOutNum = parseFloat(cashOut);
+  console.log(cashOutNum);
+  const pin = document.getElementById("enterPin2").value;
+  console.log(pin);
+  const pinNum = parseFloat(pin);
+  console.log(pinNum);
+  //   wrong way to check /
+
+  if (pinNum == "13226") {
+    const displayAmount = document.getElementById("displayAmount").innerText;
+    console.log(displayAmount);
+    const displayAmountNum = parseFloat(displayAmount);
+    const remain = displayAmountNum - cashOutNum;
+    document.getElementById("displayAmount").innerText = remain;
+  } else {
+    alert("something went wrong please contact your bank");
+  }
+  document.getElementById("enterPin").value = "";
+  document.getElementById("addCash").value = "";
+});
