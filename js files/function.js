@@ -1,7 +1,9 @@
+// this js for touggle purpose
+
 const addCashHere = document.getElementById("cashAdd");
-console.log(addCashHere);
+// console.log(addCashHere);
 const cashOutHere = document.getElementById("cashOuts");
-console.log(cashOutHere);
+// console.log(cashOutHere);
 //btn of withdrawl
 const colBtn = document.getElementById("collect");
 
