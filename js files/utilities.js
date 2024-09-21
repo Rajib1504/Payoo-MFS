@@ -2,7 +2,7 @@
  * this file is for function which we are using repetaedely
  *
  */
-// console.log("function is added here");
+console.log("function is added here");
 
 // This function is doing the work for a specific id :
 //
@@ -33,4 +33,12 @@ function getInNumber(idName) {
   let strValue = document.getElementById(idName).innerText;
   let num = parseFloat(strValue);
   return num;
+}
+// this function for make element visible
+function doVisible(id) {
+  document.getElementById("cashAdd").classList.add("hidden");
+  document.getElementById("cashOuts").classList.add("hidden");
+  document.getElementById("transationDetails").classList.add("hidden");
+  document.getElementById(id).classList.remove("hidden");
+  console.log(id);
 }
