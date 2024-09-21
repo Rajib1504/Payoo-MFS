@@ -1,24 +1,9 @@
 // this js for touggle purpose
-
-const addCashHere = document.getElementById("cashAdd");
-// console.log(addCashHere);
-const cashOutHere = document.getElementById("cashOuts");
-// console.log(cashOutHere);
+//transation target
 const trDetails = document.getElementById("transationDetails");
 //btn of withdrawl- styles
 const colBtn = document.getElementById("collect");
 
-// const btnAdd = document
-//   .getElementById("moneyIn")
-//   .addEventListener("click", function () {
-//     addCashHere.classList.remove("hidden");
-//     cashOutHere.classList.add("hidden");
-//   });
-// const moneyOut = document
-//   .getElementById("moneyOut")
-//   .addEventListener("click", function () {
-//     addCashHere.classList.add("hidden");
-//     cashOutHere.classList.remove("hidden");
 // addCash form toggle ......
 document.getElementById("moneyIn").addEventListener("click", function () {
   doVisible("cashAdd");
@@ -27,6 +12,7 @@ document.getElementById("moneyIn").addEventListener("click", function () {
 document.getElementById("moneyOut").addEventListener("click", function () {
   doVisible("cashOuts");
 });
+// widthdrawl from toggle....
 document.getElementById("transation").addEventListener("click", function () {
   doVisible("transationDetails");
 });
@@ -40,4 +26,3 @@ document.getElementById("transation").addEventListener("click", function () {
   border = "2px solid grey";
   fontFamily = "timesRoman";
 }
-// });

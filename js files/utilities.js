@@ -2,16 +2,7 @@
  * this file is for function which we are using repetaedely
  *
  */
-console.log("function is added here");
 
-// This function is doing the work for a specific id :
-//
-// function getInputFildValueById() {
-//   const value = document.getElementById("addCash").value;
-//   return value;
-// }
-//
-// This is the function which will give the value from all types input by sing id:by using parameter and argument.
 function inputValue(id) {
   let valueOfInp = document.getElementById(id).value;
   let valueInputNum = parseFloat(valueOfInp);
@@ -40,5 +31,5 @@ function doVisible(id) {
   document.getElementById("cashOuts").classList.add("hidden");
   document.getElementById("transationDetails").classList.add("hidden");
   document.getElementById(id).classList.remove("hidden");
-  console.log(id);
+  // console.log(id);
 }

@@ -1,71 +1,4 @@
-// console.log("home added");
-// Add cash part :
-// step -1  target the btn and prevent default...
-// const submit = document
-//   .getElementById("submit")
-//   .addEventListener("click", function (event) {
-//     event.preventDefault();
-//     //     console.log("submit clicked");
-//     //     step-2 adding cash
-//     const addCash = document.getElementById("addCash").value;
-
-//     //     step-3 add pin
-//     const enterPin = document.getElementById("enterPin").value;
-//     // step-4 checking the pin
-//     if (enterPin == "13226") {
-//       console.log("your money is ading now");
-//       // step-5 get the current total amount
-//       const displayAmount = document.getElementById("displayAmount").innerText; // because this value is inside a div not in a input tag so we can't to get the inner value.
-//       // console.log(displayAmount);
-//       // step -6 get new money in display
-//       //problem is this values are the string so you need to convert them in number then you can do it.
-//       // step-7 converting strings to number :
-//       const displayAmountNum = parseFloat(displayAmount); // display now in number
-//       // console.log(displayAmountNum);
-//       const addCashNum = parseFloat(addCash); // this add cash also in number now
-//       // console.log(addCashNum);
-//       // step-8 do the total and push it to the UI
-//       const newTotal = displayAmountNum + addCashNum;
-//       // console.log(newTotal);
-//       document.getElementById("displayAmount").innerText = newTotal;
-//     } else if (enterPin != "13226") {
-//       alert("show me your ID proofe");
-//     } else {
-//       alert("fail to add money please try again");
-//     }
-//     document.getElementById("enterPin").value = "";
-//     document.getElementById("addCash").value = "";
-//   });
-
-// cash out part :
-// document.getElementById("collect").addEventListener("click", function (event) {
-//   event.preventDefault();
-//   console.log("btn working");
-//   const cashOut = document.getElementById("cashOut").value;
-//   console.log(cashOut);
-//   const cashOutNum = parseFloat(cashOut);
-//   console.log(cashOutNum);
-//   const pin = document.getElementById("enterPin2").value;
-//   console.log(pin);
-//   const pinNum = parseFloat(pin);
-//   console.log(pinNum);
-//   //   wrong way to check /
-
-//   if (pinNum == "13226") {
-//     const displayAmount = document.getElementById("displayAmount").innerText;
-//     console.log(displayAmount);
-//     const displayAmountNum = parseFloat(displayAmount);
-//     const remain = displayAmountNum - cashOutNum;
-//     document.getElementById("displayAmount").innerText = remain;
-//   } else {
-//     alert("something went wrong please contact your bank");
-//   }
-//   document.getElementById("enterPin").value = "";
-//   document.getElementById("addCash").value = "";
-// });
-//
-//
-// ..........................NOW THE SAME THINGS WE WILL DO WITHOUT REPEATATION.................
+// ..........................NOW WE WILL DO WITHOUT REPEATATION.................
 // step-1 :target Btn,give event function
 // step-2:target the display,value,convert in number
 // step-3: convert the strings to number
@@ -81,10 +14,26 @@ const btn = targetId("submit").addEventListener("click", function (event) {
   const addFild = inputValue("addCash"); //cashinput add in num
   const getPin = inputValue("enterPin"); // pin add in num
   // step-4
-  if (getPin === 1234) {
+  if (getPin === 1234 || isNaN(getPin)) {
     // step-5
     const newValue = display + addFild;
     document.getElementById("displayAmount").innerText = newValue;
+
+    // transation form :
+    const p = document.createElement("div");
+    p.innerHTML = `
+    <div class = "border-l-2 border-green-600 pl-4 mb-2 ">
+    <h4 class = 'text-2xl '>Deposite: ${addFild}</h4>
+    <p>Last Balance: ${display}</p>
+    <p>Current Balance:${newValue}</p>
+    </div>
+    `;
+
+    console.log(p);
+    // we sent the value to the transation by using the next line
+    document.getElementById("transationDetails").appendChild(p);
+
+    // transation form finish here
   } else {
     alert("wrong information");
   }
@@ -101,6 +50,22 @@ targetId("collect").addEventListener("click", function (event) {
   if (outPin === 1234) {
     const totalCashOut = displayAm - outamount;
     document.getElementById("displayAmount").innerText = totalCashOut;
+
+    // transation form
+    const history = document.createElement("div");
+    history.innerHTML = `
+      <div class = "border-l-2 border-red-600 pl-4 mt-4 ">
+    <h4 class = 'text-2xl '>Withdrawal: ${outamount}</h4>
+    <p>Last Balance: ${displayAm}</p>
+    <p>Current Balance:${totalCashOut}</p>
+    </div>`;
+    document.getElementById("transationDetails").appendChild(history);
+
+    // transation form
+    // const transation = document.createElement("p");
+    // transation.innerText = `Withdrawal amount : ${outamount} Rest Amount ${totalCashOut}`;
+    // // attaching with the transation form
+    // document.getElementById("transationDetails").appendChild(transation);
   } else {
     alert("your information is wrong ");
   }
